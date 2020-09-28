@@ -2,8 +2,9 @@ class Boid {
   constructor() {
     this.position = createVector(random(width), random(height));
     this.velocity = p5.Vector.random2D();
-    this.velocity.setMag(random(0.5, 1.5));
+    this.velocity.setMag(random(2, 4));
     this.acceleration = createVector();
+    this.maxForce = 1;
   }
 
   align(boids) {
@@ -25,6 +26,7 @@ class Boid {
     if (total > 0) {
       steering.div(total);
       steering.sub(this.velocity);
+      steering.limit(this.maxForce);
     }
     return steering;
   }
