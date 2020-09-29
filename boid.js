@@ -1,3 +1,15 @@
+// extra work
+// 1 snapshot of all velocities for the update
+// 2 optimization: quadtree or spacial subdivision
+// 3 improve the interface: perception radius, maxForce, maxSpeed, different radii for each rule
+// 4 design of the boid
+// 5 make it 3D
+// 6 boids with different params
+// 7 add the view model (ie wanting to keep the view clear, check Flake for detail)
+// 8 add obstacles
+// 9 add other forces
+// 10 add predators
+
 class Boid {
   constructor() {
     this.position = createVector(random(width), random(height));
